@@ -9,3 +9,4 @@ printf "Creating user: $USR..."
 sudo mkdir -p $HOM
 sudo useradd -d $HOM $USR
 sudo chown -R $USR:$USR $HOM
+sudo chsh -s /bin/bash $USR

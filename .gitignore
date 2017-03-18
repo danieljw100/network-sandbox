@@ -1,0 +1,7 @@
+/.vagrant/
+#ignore everything under /all/ EXCEPT /all/templates/
+all/*
+!all/templates/
+#ignore everything under master and node synced folders
+/master/
+/node??/

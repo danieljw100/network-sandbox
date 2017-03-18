@@ -1,0 +1,13 @@
+#!/bin/sh
+
+KUBELET_OPTS="\
+--api-servers=http://master:8080 \
+--address=0.0.0.0 \
+--port=10250 \
+--enable_server=true \
+--v=0"
+
+#NOTES:
+# the '--api-server' flag is how the master and node find each other (and yet this flag is NOT listed on the Kubernetes api-server ref page!!!)
+#--hostname_override=node01 \ # this has been removed so that the default above is generic for all nodes
+#--etcd_servers=http://master:4001 # '--etcd_servers' is an invlaid flag

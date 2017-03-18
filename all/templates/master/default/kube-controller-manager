@@ -1,0 +1,9 @@
+#!/bin/sh
+
+KUBE_CONTROLLER_MANAGER_OPTS="\
+--address=0.0.0.0 \
+--master=127.0.0.1:8080 \
+--v=0"
+
+
+#--machines=node01 \ # '--machines' flag causing errors

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+ETCD_OPTS="\
+--name node02 \
+--initial-advertise-peer-urls http://node02:2380 \
+--listen-peer-urls http://0.0.0.0:2380 \
+--listen-client-urls http://0.0.0.0:2379,http://127.0.0.1:4001 \
+--advertise-client-urls http://0.0.0.0:2379 \
+--initial-cluster-token etcd-cluster \
+--initial-cluster node01=http://node01:2380,node02=http://node02:2380 \
+--initial-cluster-state new"
+
+#ETCD_OPTS=""

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Docker Upstart and SysVinit configuration file
+
+#
+# THIS FILE DOES NOT APPLY TO SYSTEMD
+#
+#   Please see the documentation for "systemd drop-ins":
+#   https://docs.docker.com/engine/articles/systemd/
+#
+
+# Customize location of Docker binary (especially for development testing).
+#DOCKERD="/usr/local/bin/dockerd"
+
+# Use DOCKER_OPTS to modify the daemon startup options.
+#DOCKER_OPTS="--dns 8.8.8.8 --dns 8.8.4.4"
+
+#DOCKER_OPTS="\
+#--bip 10.0.88.1/24 \
+#--mtu 1472"
+
+#bash /run/flannel/subnet.env
+#DOCKER_OPTS="\
+#--bip ${FLANNEL_SUBNET} \
+#--mtu ${FLANNEL_MTU}"
+
+#DOCKER_OPTS=""
+#if [ -f /run/flannel/subnet.env ]; then  
+#  source /run/flannel/subnet.env
+#  DOCKER_OPTS="--bip ${FLANNEL_SUBNET} --mtu ${FLANNEL_MTU}"
+#fi
+
+# source /run/flannel/subnet.env
+# DOCKER_OPTS="--bip ${FLANNEL_SUBNET} --mtu ${FLANNEL_MTU}"
+# echo "DOCKER_OPTS=${DOCKER_OPTS}"
+
+# If you need Docker to use an HTTP proxy, it can also be specified here.
+#export http_proxy="http://127.0.0.1:3128/"
+
+# This is also a handy place to tweak where Docker's temporary files go.
+#export TMPDIR="/mnt/bigdrive/docker-tmp"
+
+#echo "DOCKER_OPTS=$DOCKER_OPTS"

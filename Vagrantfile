@@ -7,12 +7,13 @@ Vagrant.configure("2") do |config|
   # *****************
   # USER CONFIGURABLE
   # *****************
-
-  MASTER = "master" # specifiy the hostname of the master
+  
+  MASTER = "nyqctlr02" # specifiy the hostname of the master
   MASTER_IP = "172.28.128.6" # specify the fixed IP address of the master
-  #NB: in this project the nodes IPs are made up of the master ip concatenated with the node index (1,2,...)
-  NODES = ['node01', 'node02'] # specify the hostnames of the nodes
-  NODE_IPS = ['172.28.128.61', '172.28.128.62'] # specify the IP addresses of the respective nodes
+  
+  NODES = ['nyqnode01', 'nyqnode02', 'nyqnode03', 'nyqnode04'] # specify the hostnames of the nodes
+  NODE_IPS = ['172.28.128.61', '172.28.128.62', '172.28.128.63', '172.28.128.64'] # specify the IP addresses of the respective nodes
+  
   SYNCEDALLVMS = "/vagrant/synced/allvms" # vm location of the synced folder shared by all vms
   SYNCEDTHISVM = "/vagrant/synced/thisvm" # vm location of the machine specific sycned folder
   SSH_USER = "xmen" # define the user that will be authorised to ssh between all vms

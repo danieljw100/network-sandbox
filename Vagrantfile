@@ -56,7 +56,7 @@ Vagrant.configure("2") do |config|
       vb.name = "#{MASTER}"
     end
     ma.vm.network "private_network", ip: "#{MASTER_IP}"
-    ma.vm.synced_folder "./master", "#{SYNCEDTHISVM}", :create => true      # create HOST dir (if reqd)
+    ma.vm.synced_folder "./#{MASTER}", "#{SYNCEDTHISVM}", :create => true      # create HOST dir (if reqd)
     ma.vm.provision "shell", path: "set_hostname.sh", args: ["#{MASTER}"]
     ma.vm.provision "shell", path: "make_user_keys.sh", args: ["#{SSH_USER}", "#{SYNCEDALLVMS}"]
     ma.vm.provision "shell", path: "make_host_keys.sh", args: ["#{SYNCEDALLVMS}", "#{MASTER}", "#{MASTER_IP}", "#{nodesbash}"]
